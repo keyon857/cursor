@@ -1,17 +1,11 @@
-/* 
-* I will keep publishing examples to help push the web foward.
-* PLEASE Like, Heart or Share if you like, and don't forget to follow. 
-* Thanks.
-*
-* Now let's animate it :)
-*/
+
 
 var $box = $('.box'),
   inter = 30,
   speed = 0;
 
 function moveBox(e) {
-  //TweenMax.killTweensOf();
+
   $box.each(function(index, val) {
    TweenLite.to($(this), 0.05, { css: { left: e.pageX, top: e.pageY},delay:0+(index/750)});
   });
@@ -34,12 +28,11 @@ $box.each(function(index, val) {
     }
   );
 
-//V2.0
 $('.pointer').mouseover(function(){
-  //console.log('cursor');
+
   $box.addClass('arrow');
 });
 $('.circle').mouseover(function(){
-  //console.log('circle');
+  
   $box.removeClass('arrow');
 });
